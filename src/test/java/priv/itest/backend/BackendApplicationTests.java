@@ -1,4 +1,4 @@
-package priv.itest.backend;package private.itest.backend;
+package priv.itest.backend;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
