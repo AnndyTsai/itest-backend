@@ -1,5 +1,7 @@
 package priv.itest.backend.model;
 
+import com.google.gson.Gson;
+
 import java.util.Date;
 
 /**
@@ -7,6 +9,12 @@ import java.util.Date;
  * 0n 2018/10/30 14:50.
  */
 public class User extends Model{
+    public static void main(String[] args) {
+        String str = "{\"userRole\":\"1\",\"userName\":\"faker\",\"password\":\"123456\"}";
+        User user = new Gson().fromJson(str, User.class);
+        System.out.println(user);
+    }
+
     private Integer userId;
 
     private String userName;
