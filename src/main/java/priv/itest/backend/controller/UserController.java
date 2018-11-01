@@ -30,7 +30,6 @@ public class UserController {
     @RequestMapping(value = "/saveUser", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public String saveUser(@RequestBody User user){
         user.setCreateTime(new Date());
-        System.out.println(user);
         int count = userDao.saveUser(user);
         return "" + count;
     }
